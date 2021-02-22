@@ -1,0 +1,94 @@
+<mat-card style="margin-top: 40px;">
+  <ng-container *ngIf="!loading">
+    <h1>Estimada Xiaomi,</h1>
+
+    Como usuarios de dispositivos de Xiaomi, Redmi y POCO del mercado Global ha llegado un punto en el que nos vemos
+    obligados a hacer una queja conjunta respecto al soporte de dichos terminales.<br><br>
+  
+    Cuando se creó la empresa en el año 2010 el objetivo era hacer un dispositivo económico y de buena calidad. Una de
+    las principales características por las que los usuarios empezamos a comprar MIUI era porque se podía personalizar
+    completamente, era un sistema más abierto, mediante el uso de temas y la cantidad de opciones que había. Pero llegó
+    un momento en el que el objetivo de MIUI cambió, y se empezaron a eliminar esas opciones por las que mucha gente
+    compraba los dispositivos. Con la llegada de la ROM Global se perdió hasta la característica de los temas, estando
+    años bloqueada la aplicación. Además la llegada de la ROM Global introdujo el cambio de varias aplicaciones de
+    Xiaomi por las de Google.<br><br>
+  
+    Aunque gracias a la llegada de Xiaomi al mercado Global los usuarios de este mercado no nos haga falta recurrir a la
+    importación de dispositivos desde China, muchos nos hemos visto en la necesidad de recurrir al cambio de ROM Global
+    por la versión China o por ROMs de terceros. Esto se debe a la mala optimización de la ROM Global. Al lanzar tantos
+    dispositivos al año y en tantas variantes, ha provocado que el soporte de las versiones globales sea nefasto. En los
+    últimos meses hemos visto dispositivos que han quedado inservibles al ser lanzadas actualizaciones OTA mal
+    desarrolladas, a que prácticamente todos los dispositivos contengan errores graves que imposibiliten el uso correcto
+    de los terminales y que muchos dispositivos tarden meses en corregir cualquier error que tengan. <br><br>
+  
+    Tan solo hay que darse una vuelta por Google, Mi Community o las redes sociales para comprobar los miles de usuarios
+    que están teniendo problemas con sus dispositivos Xiaomi. <br><br>
+  
+    Desde este comunicado, pedimos una serie de soluciones para que los usuarios que hemos estado desde el principio y
+    los que han ido llegando después continuemos usando los dispositivos Xiaomi y no nos veamos obligados a buscar
+    alternativas en otros lugares.<br><br>
+  
+    <h2>Mejor soporte de las ROMs Globales</h2>
+  
+    Pedimos un mejor soporte de las ROMs Globales, con la creación de un departamento en Europa destinado exclusivamente
+    a las ROMs Globales y un mayor contacto con los usuarios y el reporte de errores.<br><br>
+  
+    El no tener un departamento de desarrollo fuera de China provoca que los propios desarrolladores no prueben las ROMs
+    en territorio Europeo o Americano, por tanto, muchos de los errores no son detectados hasta que no ha sido lanzada
+    la actualización. También provoca que el contacto desarrollador-usuario se vea perjudicado por las barreras del
+    idioma, horario, cultura y herramientas. <br><br>
+  
+    <h2>Equiparación de la ROM Global con la versión China</h2>
+  
+    Si comparamos las versiones Globales con las versiones Europeas comprobamos que muchas de las características no son
+    iguales, muchas de las novedades de la ROM China no están disponibles en la versión Global. Tan solo hay que mirar
+    en las novedades de MIUI 12.5 de China y las de la global, la mayoría como los sonidos de animales no están. También
+    estas diferencias se encuentra en la optimización, si comparamos la cámara de un Mi 10 Pro entre las versiones China
+    y Global, comprobamos que la versión Global tiene peor calidad que la versión China.<br><br>
+  
+    <h2>Cantidad de dispositivos</h2>
+  
+    Este punto puede ser entendible para una empresa en la que quiere ganar mucho dinero, pero llega a convertirse en un
+    punto negativo debido a que el número de ROMs para mantener el soporte aumenta y si no hay un aumento en el
+    departamento de desarrollo al final termina empeorando el soporte de las ROMs. <br><br>
+  
+    También provoca que muchos usuarios ante la cantidad de terminales que hay disponibles no sepan cuál elegir y
+    terminan eligiendo otra marca. En Europa y latinoamérica, la media de reemplazo de los terminales es cada 3 años,
+    por tanto no necesitamos tanta variedad de dispositivos y nuevas versiones cada poco tiempo.<br><br>
+  
+    <h2>Más ecosistema Xiaomi</h2>
+  
+    Una de las mejores características de la marca es el ecosistema de Xiaomi, sus productos y aplicaciones. Pero cada
+    vez podemos disfrutar menos de este ecosistema debido a la sustitución de las aplicaciones por las de Google y al no
+    traer más opciones al mercado Global.<br><br>
+    <ul>
+      <li>Las aplicaciones de Contactos, Mensajes y Llamadas de Xiaomi fueron sustituidas por las de Google provocando
+        que no se puedan grabar llamadas en las versiones Globales.</li>
+      <li>Se ha cambiado la aplicación de App Vault por Google Discover, haciendo imposible el uso de la aplicación de
+        Xiaomi.</li>
+      <li>Muchos de los productos de Xiaomi nos gustaría tenerlos en el mercado Global, como son: Mi Drive, Asistente,
+        Mi Wallet, NFC en los relojes, etc…</li>
+    </ul><br><br>
+  
+    Nos gusta Xiaomi, pero no el rumbo que está tomando la empresa, el aumento de precio en los dispositivos se debería
+    haber convertido en un mejor soporte, pero en su lugar ha ido a peor. Ya no es la misma empresa a la que se la
+    llamaba “Calidad-Precio” o a la que le importaba más los Mi Fans que las ventas. Por eso desde este comunicado
+    animamos a la empresa original a cambiar otra vez de rumbo y volver a lo que era antes y que vuelvan a escuchar a
+    los Mi Fans.
+  </ng-container>
+  <ng-lottie *ngIf="loading" [options]="options"></ng-lottie>
+</mat-card>
+<mat-card style="margin-top: 40px; margin-bottom: 60px;">
+  <mat-tab-group>
+    <mat-tab label="DA TU OPINIÓN"> 
+      <app-disqus style="margin-top: 30px;display: block;"></app-disqus> 
+    </mat-tab>
+    <mat-tab label="NOTICIAS">
+      <ng-container *ngFor="let news of listNews">
+        <app-news [text]="news.text" [slug]="news.slug" [left]="news.left" [link]="news.link"></app-news>
+      </ng-container>
+    </mat-tab>
+  </mat-tab-group>
+  
+  
+</mat-card>
