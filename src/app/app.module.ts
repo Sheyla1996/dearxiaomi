@@ -13,6 +13,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { WidgetTelegramComponent } from './components/misc/widget-telegram/widget-telegram.component';
+import { GoogleSheetsDbService } from 'ng-google-sheets-db';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/pages/home/home.component';
+import { EnComponent } from './components/pages/en/en.component';
+import { PolicyComponent } from './components/pages/policy/policy.component';
 
 export function playerFactory() {
   return player;
@@ -21,8 +28,12 @@ export function playerFactory() {
   declarations: [
     AppComponent,
     EsComponent,
+    EnComponent,
     DisqusComponent,
-    NewsComponent
+    NewsComponent,
+    WidgetTelegramComponent,
+    HomeComponent,
+    PolicyComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +43,11 @@ export function playerFactory() {
     MatCardModule,
     MatToolbarModule,
     MatTabsModule,
-    LottieModule.forRoot({ player: playerFactory })
+    LottieModule.forRoot({ player: playerFactory }),
+    FlexLayoutModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GoogleSheetsDbService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

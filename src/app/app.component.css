@@ -1,7 +1,11 @@
 .content {
-    margin: 60px 30%;
+    margin: 60px 20%;
+    padding-bottom: 40px;
 }
 
-body {
-    background-color: bisque;
-}
+@media (max-width: 600px) {
+    .content {
+        margin: 50px 5%;
+        padding-bottom: 40px;
+    }
+  }

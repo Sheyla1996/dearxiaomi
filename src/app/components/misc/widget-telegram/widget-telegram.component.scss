@@ -1,0 +1,9 @@
+iframe {
+    min-width: 0 !important;
+}
+@media screen and (max-width: 600px) {
+    iframe {
+        margin-left: -15px;
+        width: calc(100% + 5px);
+    }
+}

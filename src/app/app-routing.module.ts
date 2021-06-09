@@ -1,9 +1,12 @@
 import { EsComponent } from './components/pages/es/es.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './components/pages/home/home.component';
+import { PolicyComponent } from './components/pages/policy/policy.component';
 
 const routes: Routes = [
-  {path: '', component: EsComponent}
+  {path: '', component: HomeComponent},
+  {path: 'policy', component: PolicyComponent}
 ];
 
 @NgModule({

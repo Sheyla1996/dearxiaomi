@@ -1,0 +1,9 @@
+<ng-container *ngIf="locale.startsWith('es'); else english">
+  <app-es></app-es>
+</ng-container>
+<ng-template #english>
+  <app-en></app-en>
+</ng-template>
+<div class="footer">
+  <a [routerLink]="['policy']">Politica de Privacidad</a>
+</div>
